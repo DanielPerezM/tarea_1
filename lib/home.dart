@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tarea_1/drink.dart';
+import 'package:tarea_1/drinkCard.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -58,11 +59,17 @@ class _HomeState extends State<Home> {
   }
 
   Widget buildPager(Size size) {
-    return Container(child: PageView.builder(itemBuilder: null));
+    return Container(
+        margin: EdgeInsets.only(top: 70),
+        height: size.height,
+        child: PageView.builder(
+            itemCount: getDrinks().length,
+            itemBuilder: (context, index) => Drinkcard(getDrinks()[index])));
+  }
 
-    List<Drink> getDrinks() {
-      List<Drink> list = [];
-      list.add(Drink(name, conName, backgroundImage, imageTop, imageSmall,
+  List<Drink> getDrinks() {
+    List<Drink> list = [];
+    /*  list.add(Drink(name, conName, backgroundImage, imageTop, imageSmall,
           imageBlur, cupImage, description, mBrownLight, mBrown));
 
       List<Drink> getDrinks() {
@@ -74,8 +81,7 @@ class _HomeState extends State<Home> {
       List<Drink> List = [];
       list.add(Drink(name, conName, backgroundImage, imageTop, imageSmall,
           imageBlur, cupImage, description, lightColor, darkColor));
-      }
-
-    }
+     }
+*/
   }
 }
