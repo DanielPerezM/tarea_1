@@ -28,13 +28,13 @@ class _HomeState extends State<Home> {
             width: 20,
           ),
           Image.asset(
-            'name',
+            'images/menu.png',
             width: 30,
             height: 30,
           ), //images/location.png
           Spacer(),
           Image.asset(
-            'name',
+            'images/menu.png',
             width: 30,
             height: 30,
           ), //images/drawer.png
@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
         top: 10,
         right: size.width / 2 - 25,
         child: Image.asset(
-          '',
+          'images/titulo.png',
           width: 50,
           height: 50,
         ) //imagen de logo
@@ -69,19 +69,13 @@ class _HomeState extends State<Home> {
 
   List<Drink> getDrinks() {
     List<Drink> list = [];
-    /*  list.add(Drink(name, conName, backgroundImage, imageTop, imageSmall,
-          imageBlur, cupImage, description, mBrownLight, mBrown));
+    list.add(Drink('Shinji', 'Ikari', 'city.jpg', '', '', 'eva01logo.jpg',
+        'shinji.png', 'description Shinji', mBrownLight, mBrown));
 
-      List<Drink> getDrinks() {
-      List<Drink> List = [];
-      list.add(Drink(name, conName, backgroundImage, imageTop, imageSmall,
-          imageBlur, cupImage, description, greenLight, greenDark));
+    list.add(Drink('Azuka', 'lange', 'city.jpg', '', '', 'eva02logo.jpg',
+        'azuka.png', 'descripción azuka', greenLight, greenDark));
 
-      List<Drink> getDrinks() {
-      List<Drink> List = [];
-      list.add(Drink(name, conName, backgroundImage, imageTop, imageSmall,
-          imageBlur, cupImage, description, lightColor, darkColor));
-     }
-*/
+    list.add(Drink('Rei', 'Ayanami', 'city.jpg', '', '', 'eva00logo.png',
+        'rei.png', 'descripción rei', lightColor, darkColor));
   }
 }
